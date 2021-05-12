@@ -7,8 +7,16 @@ import Movies from "./Movies"
 export default function App () {
     return (
     <>
-    <Header />
-    <Movies />
+    <BrowserRouter>
+			<Switch>
+                <Route path="/" exact>
+                    <Header />
+                    <Movies />
+                </Route>
+            </Switch>
+    </BrowserRouter>
+    
+    
     </>
     )
 }

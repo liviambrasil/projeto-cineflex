@@ -1,6 +1,8 @@
-
+import Movie from "./Movie"
 import axios from "axios"
 import { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
+
 
 export default function Movies () {
     const [movies, setMovies] = useState([]);
@@ -13,8 +15,7 @@ export default function Movies () {
     }
     , []);
 
-    console.log(movies)
-    
+    //console.log(movies)
 
     return (
         <>
@@ -24,9 +25,17 @@ export default function Movies () {
 
         <div class="movies">
             {movies.map ((movie) => {
-                <div class="movie"> </div>
-            })}
+
+                const {id, title, posterURL, overview} = movie
+                return (
+                    <Link to={`/sessoes/${movie.id}`}>
+                        <Movie id={id} title={title} posterURL={posterURL} overview={overview}/>
+                    </Link>
+                )
+            }
+            )}
         </div>
         </>
     )
 }
+
