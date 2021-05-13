@@ -83,7 +83,7 @@ body {
 }
 
 .day {
-    margin: 0 0 30px 24px;
+    margin: 0 0 20px 24px;
 }
 
 .day p {
@@ -104,6 +104,8 @@ body {
     border-radius: 3px;
     margin-right: 8px;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hour p {
@@ -111,5 +113,62 @@ body {
     font-size: 18px;
     font-weight: 400;
     text-align: center;
+    
+}
+
+.seats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5px 20px 0 20px;
+}
+
+.seatsTypes {
+    margin: 16px 56px 40px 56px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+}
+
+.seatType {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.seat {
+    width: 25px;
+    height: 25px;
+    margin: 0 4px 20px 4px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seat p {
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.green {
+    background: #8DD7CF;
+    border: 1px solid #1AAE9E;
+}
+
+.grey {
+    background: #C3CFD9;
+    border: 1px solid #7B8B99;
+}
+
+.yellow {
+    background: #FBE192;
+    border: 1px solid #F7C52B;
+}
+
+.seatType p {
+    font-size: 13px;
+    font-weight: 400;
+    color: #4E5A65;
 }

@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import Header from "./Header"
 import Movies from "./Movies"
 import Movie from "./Movie"
+import Seats from "./Seats"
 
 export default function App () {
     return (
@@ -17,6 +18,10 @@ export default function App () {
 
                 <Route path="/sessoes/:idFilme">
                     <Movie />
+                </Route>
+
+                <Route path="/assentos/:idSessao">
+                    <Seats />
                 </Route>
             </Switch>
     </BrowserRouter>

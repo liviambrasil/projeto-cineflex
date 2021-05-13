@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 
 export default function Movies () {
+    
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
@@ -14,8 +15,6 @@ export default function Movies () {
     }
     , []);
 
-    //console.log(movies)
-
     return (
         <>
         <div class="titleSection">
@@ -24,7 +23,6 @@ export default function Movies () {
 
         <div class="movies">
             {movies.map ((movie) => {
-                //console.log(movie)
                 const {posterURL} = movie
                 return (
                     <Link to={`/sessoes/${movie.id}`}>
