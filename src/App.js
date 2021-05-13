@@ -1,4 +1,5 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import ReactDOM from "react-dom";
 
 import Header from "./Header"
 import Movies from "./Movies"
@@ -8,11 +9,12 @@ export default function App () {
     return (
     <>
     <BrowserRouter>
+            <Header />
 			<Switch>
                 <Route path="/" exact>
-                    <Header />
                     <Movies />
                 </Route>
+
                 <Route path="/sessoes/:idFilme">
                     <Movie />
                 </Route>

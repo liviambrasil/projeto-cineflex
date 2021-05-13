@@ -25,7 +25,7 @@ export default function Movies () {
         <div class="movies">
             {movies.map ((movie) => {
                 //console.log(movie)
-                const {id, title, posterURL, overview} = movie
+                const {posterURL} = movie
                 return (
                     <Link to={`/sessoes/${movie.id}`}>
                         <div class="movie">
