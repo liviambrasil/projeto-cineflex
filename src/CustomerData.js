@@ -1,11 +1,26 @@
 import { useState } from "react"
+import axios from "axios"
+import { Link } from "react-router-dom";
+import Sucess from "./Sucess"
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-export default function CustomerData() {
+export default function CustomerData(props) {
+
+    const { selectedSeats } = props
 
     const [customerName, setCustomerName] = useState("")
     const [customerCPF, setCustomerCPF] = useState()
-    console.log(customerName)
-    console.log(customerCPF)
+
+    function finish () {
+
+            const promise = axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v2/cineflex/seats/book-many", 
+            {   ids: {selectedSeats},
+                name: {customerName},
+                cpf: {customerCPF},
+            })
+            promise.then(() => {
+        })
+    }
 
     return (
         <>
@@ -16,7 +31,9 @@ export default function CustomerData() {
             <input type="text" placeholder="Digite seu CPF..." onChange={(event) => setCustomerCPF(event.target.value)}/>
         </div>
         <div class="finishOrder">
-            <button>Reservar assento(s)</button>
+            <Link to="/sucesso">
+                <button onClick={() => <Sucess selectedSeats={selectedSeats} customerName={customerName} customerCPF={customerCPF}/>}>Reservar assento(s)</button>
+            </Link>
         </div>
         </>
     )

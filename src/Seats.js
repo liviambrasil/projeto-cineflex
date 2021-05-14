@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import axios from "axios"
 import ClickSeat from "./SelectSeats"
 import Seat from "./Seat"
+import CustomerData from "./CustomerData"
 
 export default function Seats() {
 
@@ -54,6 +55,7 @@ export default function Seats() {
                         <img src={movie.posterURL} />
                         <h1>{movie.title}</h1>
                 </div>
+                <CustomerData selectedSeats={selectedSeats}/>
             </>
         )}
     else {
