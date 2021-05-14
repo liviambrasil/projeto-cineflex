@@ -7,7 +7,7 @@ const { name, isAvailable } = seat
 const [classSeat, setClassSeat] = useState(isAvailable ? "seat grey" : "seat yellow")
 
 
-function ClickSeat () {
+function SelectSeats () {
 
     if(classSeat === "seat grey") {
         setClassSeat("seat green");
@@ -21,7 +21,6 @@ function ClickSeat () {
         const index = selectedSeats.findIndex((seat) => seat === name ? true : false)
         arrSelectedSeats.splice(index, 1)
         setSelectedSeats(arrSelectedSeats)
-        console.log(selectedSeats)
     }
 
     else {
@@ -32,7 +31,7 @@ function ClickSeat () {
 }
 
 return (
-    <div onClick={ClickSeat} class={classSeat}>
+    <div onClick={SelectSeats} class={classSeat}>
         <p  class="seatNumber">{name}</p>
     </div>
     )

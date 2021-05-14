@@ -1,4 +1,5 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { useState } from "react"
 import ReactDOM from "react-dom";
 
 import Header from "./Header"
@@ -8,11 +9,14 @@ import Seats from "./Seats"
 import Sucess from "./Sucess"
 
 export default function App () {
+    
+    const [finalData, setFinalData] = useState([])
     return (
     <>
     <BrowserRouter>
             <Header />
 			<Switch>
+
                 <Route path="/" exact>
                     <Movies />
                 </Route>
@@ -22,8 +26,14 @@ export default function App () {
                 </Route>
 
                 <Route path="/assentos/:idSessao">
-                    <Seats />
+                    <Seats setFinalData={setFinalData} />
                 </Route>
+
+                <Route path="/sucesso">
+                    {console.log(finalData)}
+                    <Sucess finalData={finalData}/>
+                </Route>
+
             </Switch>
     </BrowserRouter>
     
