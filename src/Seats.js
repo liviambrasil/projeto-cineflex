@@ -53,7 +53,7 @@ const { day, movie, seats, name } = seatsData
                     </div>
                     <div class="seatType">
                         <div class="seat yellow"></div>
-                        <p>Disponível</p>
+                        <p>Ocupado</p>
                     </div>
                 </div>
 
