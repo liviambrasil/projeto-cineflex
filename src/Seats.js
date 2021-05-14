@@ -59,7 +59,10 @@ const { day, movie, seats, name } = seatsData
 
                 <div class="bottomBar">
                         <img src={movie.posterURL} />
-                        <h1>{movie.title}</h1>
+                        <div class="title-session">
+                            <h1>{movie.title}</h1>
+                            <p>{day.weekday} - {name}</p>
+                        </div>
                 </div>
                 <CustomerData   setFinalData={setFinalData} 
                                 selectedSeats={selectedSeats}

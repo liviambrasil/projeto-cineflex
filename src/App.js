@@ -1,6 +1,5 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { useState } from "react"
-import ReactDOM from "react-dom";
 
 import Header from "./Header"
 import Movies from "./Movies"

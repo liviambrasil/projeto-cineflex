@@ -1,7 +1,6 @@
 import { useState } from "react"
 import axios from "axios"
-import { Link, useHistory } from "react-router-dom";
-import Sucess from "./Sucess"
+import { useHistory } from "react-router-dom";
 
 export default function CustomerData(props) {
 
@@ -20,7 +19,7 @@ export default function CustomerData(props) {
             )
 
             promise.then(() => history.push("/sucesso"))
-            promise.catch(alert("Falha ao carregar o pedido"))
+            //promise.catch(alert("Falha ao carregar o pedido"))
 
             setFinalData([movieTitle, day, selectedSeats, customerName, customerCPF, hour])
 
@@ -40,5 +39,3 @@ export default function CustomerData(props) {
         </>
     )
 }
-
-
