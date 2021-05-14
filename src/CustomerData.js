@@ -20,6 +20,7 @@ export default function CustomerData(props) {
             )
 
             promise.then(() => history.push("/sucesso"))
+            promise.catch(alert("Falha ao carregar o pedido"))
 
             setFinalData([movieTitle, day, selectedSeats, customerName, customerCPF, hour])
 

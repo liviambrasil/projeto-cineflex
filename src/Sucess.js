@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import axios from "axios"
+import { useHistory } from "react-router-dom"
 
 export default function Sucess (props) { 
     
@@ -11,7 +12,12 @@ export default function Sucess (props) {
     const customerName = props.finalData[3]
     const customerCPF= props.finalData [4]
     const hour = props.finalData[5]
+    const history = useHistory()
 
+
+    function refresh () {
+        history.push("/")
+    }
 
     return (
         <div class="sucessPage">
@@ -45,7 +51,7 @@ export default function Sucess (props) {
             </div>
 
             <div class="divButton">
-                <button>voltar pra Home</button>
+                <button onClick={refresh}>Voltar pra Home</button>
             </div>
         </div>
     )
