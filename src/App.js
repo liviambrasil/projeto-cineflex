@@ -5,6 +5,7 @@ import Header from "./Header"
 import Movies from "./Movies"
 import Movie from "./Movie"
 import Seats from "./Seats"
+import CustomerData from "./CustomerData"
 
 export default function App () {
     return (
@@ -22,6 +23,7 @@ export default function App () {
 
                 <Route path="/assentos/:idSessao">
                     <Seats />
+                    <CustomerData />
                 </Route>
             </Switch>
     </BrowserRouter>

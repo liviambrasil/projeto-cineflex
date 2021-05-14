@@ -2,11 +2,9 @@ import { useState } from "react"
 
 export default function Seat (props) {
 
-const { seat, selectedSeats, setSelectedSeats} = props
+const { seat, selectedSeats, setSelectedSeats } = props
 const { name, isAvailable } = seat
 const [classSeat, setClassSeat] = useState(isAvailable ? "seat grey" : "seat yellow")
-
-
 
 
 function ClickSeat () {
