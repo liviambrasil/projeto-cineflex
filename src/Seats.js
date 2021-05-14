@@ -1,12 +1,14 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from "axios"
-import React from "react"
+import ClickSeat from "./SelectSeats"
+import Seat from "./Seat"
 
 export default function Seats() {
 
     const { idSessao } = useParams()
     const [seatsData, setSeatsData] = useState([])
+    const [classSeat, setClassSeat] = useState("seat grey")
 
     useEffect(() => {
 		const promise = axios.get(`https://mock-api.bootcamp.respondeai.com.br/api/v2/cineflex/showtimes/${idSessao}/seats`);
@@ -16,11 +18,7 @@ export default function Seats() {
     }
     , []);
 
-    console.log(seatsData)
     const {day, movie, seats} = seatsData
-    const {classSeat, setClassSeat} = React.useState("")
-    const {selectedSeats, setSelectedSeats} = React.useState([])
-
 
     if(seats !== [] && seats !== undefined) {
         return (
@@ -29,13 +27,11 @@ export default function Seats() {
                     <h1>Selecione os assentos</h1>
                 </div>
                 <div class="seats">
-                    {seats.map((seats) => {
-                        return (
-                        <div class={seats.isAvailable ? "seat grey" : "seat yellow"}>
-                            <p>{seats.name}</p>
-                        </div>
+                    {seats.map((seat) => {
+                        return(
+                        <Seat seat={seat}/>
+                        )}
                         )
-                        })
                     }    
                 </div>
 
