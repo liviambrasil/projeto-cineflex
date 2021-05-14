@@ -8,7 +8,7 @@ export default function Seats() {
 
     const { idSessao } = useParams()
     const [seatsData, setSeatsData] = useState([])
-    const [classSeat, setClassSeat] = useState("seat grey")
+    const [selectedSeats, setSelectedSeats] = useState([])
 
     useEffect(() => {
 		const promise = axios.get(`https://mock-api.bootcamp.respondeai.com.br/api/v2/cineflex/showtimes/${idSessao}/seats`);
@@ -29,7 +29,7 @@ export default function Seats() {
                 <div class="seats">
                     {seats.map((seat) => {
                         return(
-                        <Seat seat={seat}/>
+                        <Seat seat={seat} selectedSeats={selectedSeats} setSelectedSeats={setSelectedSeats}/>
                         )}
                         )
                     }    
