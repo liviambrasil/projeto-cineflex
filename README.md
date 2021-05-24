@@ -20,6 +20,6 @@ Cineflex is a single page application wrote for a cinema, where the clients can 
 
 ### Tools and frameworks
 
-- [React]
-- [ReactRouter]
-- [Axios]
+- React
+- ReactRouter
+- Axios
