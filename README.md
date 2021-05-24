@@ -1,18 +1,16 @@
-# Getting Started with Create React App
+# Cineflex
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About
 
-## Available Scripts
+Cineflex is a single page application wrote for a cinema, where the clients can select the films sessions and reserve seats. This project was written during the Responde Aí Bootcamp.
 
-In the project directory, you can run:
+### Features
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [x] List of films playing at the cinema
+- [x] List of sessions for each film
+- [x] Interface with the available seats in the session
+- [x] Form for client data
+- [x] Navigation buttons between all pages
 
 ### `npm test`
 
