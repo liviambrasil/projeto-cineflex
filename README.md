@@ -14,12 +14,8 @@ Cineflex is a single page application wrote for a cinema, where the clients can 
 
 ### Languages
 
-- [HTML5](https://devdocs.io/html/)
-- [CSS3](https://devdocs.io/css/)
-- [JavaScript](https://devdocs.io/javascript/)
+![HTML5](https://img.shields.io/badge/-HTML5-333333?style=flat&logo=HTML5)&nbsp;![CSS](https://img.shields.io/badge/-CSS-333333?style=flat&logo=CSS3&logoColor=1572B6)&nbsp;![JavaScript](https://img.shields.io/badge/-JavaScript-333333?style=flat&logo=javascript)&nbsp;
 
 ### Tools and frameworks
 
-- React
-- ReactRouter
-- Axios
+![React](https://img.shields.io/badge/-React-333333?style=flat&logo=react)&nbsp;![React Router](https://img.shields.io/badge/-ReactRouter-333333?style=flat&logo=ReactRouter)&nbsp;![Axios](https://img.shields.io/badge/-Axios-3883DC?style=flat)
